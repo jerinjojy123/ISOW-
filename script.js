@@ -9,6 +9,7 @@ const properties = [
     displayPrice:"5 Cr",
     area:"2400 Sqft",
     image:"images/land1.jpg",
+	Cn:"" ,
     description:"DTCP approved residential plot near OMR IT Corridor."
 },
 
@@ -151,7 +152,7 @@ Featured
 <div class="card-content">
 
 <h3>${p.title}</h3>
-
+<h5>ID: ${p.id}</h5>
 <p>📍${p.primeLocation}, ${p.city}</p>
 
 <p>💰 ₹${p.displayPrice}</p>
