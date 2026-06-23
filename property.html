@@ -32,9 +32,6 @@
 
     <div class="detail-card">
 
-        <img src="${property.image}"
-             class="detail-image"
-             alt="${property.title}">
 
         <div class="detail-content">
 
@@ -58,9 +55,14 @@
                 </div>
 
                 <div class="info-box">
-                    <h4>Price</h4>
-                    <p>₹${property.displayPrice}</p>
-                </div>
+    <h4>Total Value</h4>
+    <p>${property.displayPrice}</p>
+</div>
+
+<div class="info-box">
+    <h4>Rate Per Acre</h4>
+    <p>${property.ratePerAcre}</p>
+</div>
 
                 <div class="info-box">
                     <h4>Area</h4>
