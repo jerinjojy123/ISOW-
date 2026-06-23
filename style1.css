@@ -320,190 +320,109 @@ margin-top:30px;
     transform:translateY(-3px);
 }
 
-#contactInfo{
+/* BUTTON GROUP */
+
+.button-group{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
     margin-top:25px;
+}
+
+/* COMMON BUTTON STYLE */
+
+.contact-btn,
+.whatsapp-btn,
+.back-btn{
+    border:none;
+    padding:14px 24px;
+    border-radius:30px; /* Fully Rounded */
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:all 0.3s ease;
+    color:white;
+}
+
+/* CONTACT BUTTON */
+
+.contact-btn{
+    background:#003566;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+    background:#25D366;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+    background:#444;
+}
+
+/* HOVER EFFECT */
+
+.contact-btn:hover,
+.whatsapp-btn:hover,
+.back-btn:hover{
+    transform:translateY(-3px);
+    opacity:0.9;
+}
+
+/* CONTACT DETAILS BOX */
+
+#contactInfo{
+    margin-top:20px;
     padding:20px;
-    border-radius:12px;
     background:#eef5ff;
     border-left:5px solid #003566;
+    border-radius:15px;
 }
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-   ========================= */
 
-@media screen and (max-width: 768px){
+#contactInfo h3{
+    margin-bottom:15px;
+    color:#003566;
+}
 
-    .hero{
-        height:80vh;
-    }
+#contactInfo p{
+    margin:10px 0;
+    font-size:16px;
+}
 
-    .hero-logo img{
-        width:140px;
-    }
+#contactInfo a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
 
-    .hero-logo h6{
-        font-size:12px;
-        color:white;
-        font-style:italic;
-    }
+/* CONTACT ACTION BUTTONS */
 
-    .overlay{
-        padding:100px 20px 20px;
-        text-align:center;
-    }
+.contact-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
 
-    .overlay h1{
-        font-size:32px;
-        line-height:1.2;
-    }
+/* MOBILE */
 
-    .overlay p{
-        font-size:16px;
-    }
-
-    .search-box{
-        flex-direction:column;
-        width:100%;
-        align-items:center;
-    }
-
-    .search-box input{
-        width:100%;
-        max-width:350px;
-    }
-
-    .search-box button{
-        width:100%;
-        max-width:350px;
-    }
-
-    .filters{
-        flex-direction:column;
-        padding:20px;
-        gap:10px;
-    }
-
-    .filters select,
-    .filters button{
-        width:100%;
-    }
-
-    .section-title{
-        font-size:28px;
-    }
-
-    .property-container{
-        grid-template-columns:1fr;
-        padding:15px;
-    }
-
-    .card img{
-        height:220px;
-    }
-
-    .card-content{
-        padding:15px;
-    }
-
-    .card-content h3{
-        font-size:20px;
-    }
-
-    .card-content h5{
-        font-size:14px;
-    }
-
-    .card-content p{
-        font-size:14px;
-    }
-
-    .card-content button{
-        width:100%;
-    }
-
-    .detail-page{
-        padding:15px;
-    }
-
-    .detail-image{
-        height:250px;
-    }
-
-    .detail-content{
-        padding:15px;
-    }
-
-    .detail-content h1{
-        font-size:28px;
-    }
-
-    .property-info{
-        grid-template-columns:1fr;
-    }
-
-    .info-box{
-        padding:15px;
-    }
-
-    .info-box p{
-        font-size:16px;
-    }
-
-    .description{
-        font-size:15px;
-    }
+@media(max-width:768px){
 
     .button-group{
-        display:flex;
         flex-direction:column;
-        gap:10px;
     }
 
     .button-group button{
         width:100%;
-        margin-right:0;
     }
 
-    footer{
-        padding:20px;
+    .contact-actions{
+        flex-direction:column;
     }
 
-}
-
-/* Extra Small Mobiles */
-
-@media screen and (max-width:480px){
-
-    .hero-logo img{
-        width:120px;
+    .contact-actions button{
+        width:100%;
     }
-.hero-logo h6{
-    color:white;
-    font-style:italic;
-    font-size:14px;
-    margin-top:5px;
-    text-align:center;
-    font-weight:normal;
-}
-    .overlay h1{
-        font-size:26px;
-    }
-
-    .overlay p{
-        font-size:14px;
-    }
-
-    .search-box input,
-    .search-box button{
-        max-width:100%;
-    }
-
-    .section-title{
-        font-size:24px;
-    }
-
-    .detail-content h1{
-        font-size:24px;
-    }
-
 }
