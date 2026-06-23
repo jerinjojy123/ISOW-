@@ -11,12 +11,9 @@
 
     <div class="hero-logo">
         <img src="logo.png" alt="ISOW Properties Logo">
-		<h6 style="color: white; font-style: italic;">
-    Your Property, Our Priority
-</h6>
-           </div>
+        <h6>Your Property, Our Priority</h6>
+    </div>
 
-	
     <div class="overlay">
 	<br>
         <h1>Find Your Dream Property</h1>
@@ -45,18 +42,14 @@
 
 <section class="filters">
 
-    <select id="cityFilter" onchange="updatePrimeLocations()">
-    <option value="">All Cities</option>
-    <option value="Chennai">Chennai</option>
-    <option value="Coimbatore">Coimbatore</option>
-    <option value="Madurai">Madurai</option>
-    <option value="Bangalore">Bangalore</option>
-    <option value="Hyderabad">Hyderabad</option>
+  <select id="cityFilter"
+        onchange="updatePrimeLocations(); filterProperties();">
 </select>
 
-<select id="primeLocationFilter">
-    <option value="">All Prime Locations</option>
+<select id="primeLocationFilter"
+        onchange="filterProperties()">
 </select>
+
 <select id="priceFilter">
     <option value="">Any Price</option>
     <option value="50">Below 50 Lakhs</option>
@@ -89,7 +82,7 @@
 
 </footer>
 
-<script src="script.js"></script>
+<script src="script1.js"></script>
 
 </body>
 </html>
