@@ -14,13 +14,8 @@
 
     <script>
 
-        const properties = JSON.parse(
-            localStorage.getItem("properties")
-        );
-
-        const selectedId = localStorage.getItem(
-            "selectedProperty"
-        );
+        const properties = JSON.parse(localStorage.getItem("properties"));
+        const selectedId = localStorage.getItem("selectedProperty");
 
         const property = properties.find(
             p => p.id == selectedId
@@ -28,106 +23,111 @@
 
         document.getElementById("propertyDetails").innerHTML = `
 
-<div class="detail-page">
+        <div class="detail-page">
 
-    <div class="detail-card">
+            <div class="detail-card">
 
+                <div class="detail-content">
 
-        <div class="detail-content">
+                    <span class="badge">
+                        ⭐ Featured Property
+                    </span>
 
-            <span class="badge">
-                ⭐ Featured Property
-            </span>
-						
-            <h1>${property.title}</h1>
+                    <h1>${property.title}</h1>
 
-			<h2>ID: ${property.id}</h2>
-            <div class="property-info">
+                    <h2>ID: ${property.id}</h2>
 
-                <div class="info-box">
-                    <h4>City</h4>
-                    <p>${property.city}</p>
-                </div>
+                    <div class="property-info">
 
-                <div class="info-box">
-                    <h4>Prime Location</h4>
-                    <p>${property.primeLocation}</p>
-                </div>
+                        <div class="info-box">
+                            <h4>City</h4>
+                            <p>${property.city}</p>
+                        </div>
 
-                <div class="info-box">
-    <h4>Total Value</h4>
-    <p>${property.displayPrice}</p>
-</div>
+                        <div class="info-box">
+                            <h4>Prime Location</h4>
+                            <p>${property.primeLocation}</p>
+                        </div>
 
-<div class="info-box">
-    <h4>Rate Per Acre</h4>
-    <p>${property.ratePerAcre}</p>
-</div>
+                        <div class="info-box">
+                            <h4>Total Value</h4>
+                            <p>${property.displayPrice}</p>
+                        </div>
 
-                <div class="info-box">
-                    <h4>Area</h4>
-                    <p>${property.area}</p>
+                        <div class="info-box">
+                            <h4>Rate Per Acre</h4>
+                            <p>${property.ratePerAcre}</p>
+                        </div>
+
+                        <div class="info-box">
+                            <h4>Area</h4>
+                            <p>${property.area}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="description">
+                        ${property.description}
+                    </div>
+
+                    <div class="button-group">
+
+                        <button class="contact-btn"
+                                onclick="showContact()">
+                            📞 Contact Details
+                        </button>
+
+                            <button class="back-btn" onclick="window.location.href='index.html'">
+								← Back to Listings
+								</button>
+                        </a>
+
+                    </div>
+
+                    <div id="contactInfo"></div>
+
                 </div>
 
             </div>
-
-            <div class="description">
-                ${property.description}
-            </div>
-
-            <div class="button-group">
-
-                <button class="contact-btn"
-                        onclick="showContact()">
-                    📞 Contact 
-                </button>
-
-                <a href="https://wa.me/918593076501"
-                   target="_blank">
-
-                    <button class="whatsapp-btn">
-                        WhatsApp
-                    </button>
-
-                </a>
-
-           <a href="index.html">
-    <button class="back-btn">
-        ← Back to Listings
-    </button>
-</a>
-
-            </div>
-
-            <div id="contactInfo"></div>
 
         </div>
 
-    </div>
+        `;
 
-</div>
-`;
-function showContact(){
+        function showContact() {
 
-document.getElementById("contactInfo").innerHTML=`
+            document.getElementById("contactInfo").innerHTML = `
 
-<h3>📞 Contact Details</h3>
+                <h3>📞 Contact Details</h3>
 
-<p><strong>Phone:</strong> 8593076501</p>
+          
+          
+                <p>
+                    <strong>Email: isowproperties@gmail.com</strong>
+                   
+                </p>
+				<br>
+                <div class="contact-actions">
 
-<p><strong>Email:</strong>
-isowproperties@gmail.com
-</p>
+                    <a href8593076501
+                        <button class="contact-btn">
+                            📞 Call Now
+                        </button>
+                    </a>
 
-`;
+                    <a href="https://wa.me/918593076501"
+                      class="whatsapp-btn">
+                            WhatsApp
+                        </button>
+                    </a>
 
-}
-function goBack() {
-    window.location.href = "index.html";
-}
+                </div>
+
+            `;
+
+        }
 
     </script>
 
 </body>
-
 </html>
